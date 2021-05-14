@@ -1,4 +1,48 @@
 { 
+  "users": [
+    {
+      "id": 1,
+      "first_name": "Shivam",
+      "last_name": "Gupta",
+      "username": "shivam",
+      "password": "12345@",
+      "email": "shivamgupta@gmal.com",
+      "phone": 1234567890,
+      "address": "674/17, Mahajan Padav",
+      "country": "India",
+      "state": "Haryana",
+      "city": "Rohtak",
+      "zip": 124001
+    },
+    {
+      "id": 2,
+      "first_name": "Rahul",
+      "last_name": "Gupta",
+      "username": "rahul",
+      "password": "12345@",
+      "email": "rahulgupta@gmal.com",
+      "phone": 1234567890,
+      "address": "674/17, Mahajan Padav",
+      "country": "India",
+      "state": "Haryana",
+      "city": "Rohtak",
+      "zip": 124001
+    },
+    {
+      "first_name": "Rajesh",
+      "last_name": "Kumar",
+      "email": "rajesh.kumar@nagarro.com",
+      "phone": "123456789",
+      "username": "rajesh",
+      "password": "12345@",
+      "address": "1234 Main St",
+      "country": "India",
+      "state": "Haryana",
+      "city": "Rohtak",
+      "zip": "124001",
+      "id": 3
+    }
+  ],
   "products": [
     {
       "id": 1,
