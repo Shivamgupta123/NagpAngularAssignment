@@ -1,0 +1,46 @@
+
+<div class="container">
+    <div class="card" style="width: 18rem;margin-left: 35%;margin-top: 70px;">
+        <div class="card-body">
+          <h5 class="card-title">Login</h5>
+          <div *ngIf="isLoginError" class="red-text center error-message">
+            Incorrect User name or password !!!
+          </div>
+          <form [formGroup]="loginForm" class="form-group" (ngSubmit)="OnSubmit()">
+            <div class="form-group">
+              <label for="exampleInputUsername">Username</label>
+              <input type="text" 
+              class="form-control" 
+              id="Username"
+              placeholder="Enter username" 
+              formControlName = "Username"
+              [ngClass]="getControlValidationClasses(EmailControl)" />
+              <div class="valid-feedback" *ngIf="textControl.valid">
+                Looks good!
+              </div>
+              <div class="invalid-feedback" *ngIf="textControl.touched && textControl.errors?.required">
+                This field is required
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" 
+              class="form-control"
+              id="Password" 
+              placeholder="Password" 
+              formControlName = "Password"
+              required
+              [ngClass]="getControlValidationClasses(PasswordControl)"/>
+              <div class="valid-feedback" *ngIf="textControl.valid">
+                Looks good!
+              </div>
+              <div class="invalid-feedback" *ngIf="textControl.touched && textControl.errors?.required">
+                This field is required
+              </div>
+            </div>
+            <button [disabled]="!loginForm.valid" type="submit" class="btn btn-primary">Login</button>
+          </form>
+          <button type="submit" [routerLink] = "['/register']" routerLinkActive = "active" class="btn btn-primary" style="margin-left: 165px; margin-top: -98px;">Register</button>
+        </div>
+      </div>
+</div>

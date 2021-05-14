@@ -1,0 +1,105 @@
+<div class="container">
+<div class="card" style="width: 100%">
+    <div class="card-body">
+      <h5 class="card-title">Hey {{user.first_name + ' '+ user.last_name + ' , ' }} Thank you for ordering with us.</h5>
+      <p class="card-text">Order reference number for your future reference is : {{order.ref_number}}</p>
+      <p class="card-text">Here is the complete information for your order.</p>
+      <br>
+      <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Personal Details : </h5>
+          <div class="row">
+              <div class="col">
+                  Name : {{order.name}}
+              </div>
+              <div class="col">
+                Email : {{order.email}}
+            </div>
+            <div class="col">
+                Phone : {{order.phone}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Address Details : </h5>
+          <div class="row">
+              <div class="col">
+                  Address : {{order.address}}
+              </div>
+          </div>
+          <br>
+          <div class="row">
+              <div class="col-md-4">
+                Country : {{order.country}}
+            </div>
+            <div class="col-md-2">
+                State : {{order.state}}
+            </div>
+            <div class="col-md-2">
+                City : {{order.city}}
+            </div>
+            <div class="col-md-4">
+                Pin Code : {{order.zip}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Product Details : </h5>
+            <table class="table" *ngIf = "products && products.length">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Name</th>
+                    <th scope="col"># of items</th>
+                    <th scope="col">Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor = "let product of products">
+                    <td style="text-align: -webkit-center"><img [src]="product.image" style="height: 80px;"></td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.quantity}}</td>
+                    <td>{{product.price | currency : 'INR'}}</td>
+                    
+                  </tr>
+                  <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td>Total amount paid : </td>
+                    <td>{{order.total_price | currency : 'INR'}}</td>
+                 </tr> 
+                  
+                </tbody>
+              </table>
+              <br>
+              
+        </div>
+      </div>
+      <br>
+      Your items will be delivered to you in next two days i.e. by {{order.date_delivery}}
+      <br>
+      <br>
+      
+          <div class="card text-center">
+        <div class="card-body">
+         <p class="card-text">Thank You !!!</p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="card text-right" >
+        <div class="card-body">
+          <a [routerLink] = "['/grid']" routerLinkActive = "active" class="btn btn-primary">Continue Shopping</a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>

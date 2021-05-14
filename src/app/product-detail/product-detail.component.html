@@ -1,0 +1,31 @@
+<!-- <p>product-detail works!</p> -->
+<br>
+<!-- <img [src] = "product.image" alt="MyMobile" height="40px" width="40px"/>
+<p>
+    Name: <b>{{product.name}}</b> <br/>
+    
+    Price: {{product.price}}<br/>
+    Category: {{product.category}}<br/>
+    <button >Add to cart</button>
+</p> -->
+<div class="container">
+<div class="card mb-3" style="max-width: 100%;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img [src]="product.image" class="card-img" alt="..." style="height: 100%;">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{product.name}}</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class = "card-text">Price : {{product.price}}</p>
+          <p class = "card-text">Category : {{product.category}}</p>
+          <p class = "card-text"># of items available : {{product.number}}</p>
+          <p class="card-text" *ngIf = "product.number == 0"><small class="text-muted">Out Of stock!</small></p>
+          <button class="btn btn-primary" (click) = "addToCart(product)" [disabled] = "product.number == 0">Add to cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary" [routerLink] = "['/grid']" routerLinkActive = "active" style="margin-left: 967px;" >Back to products</button>
+</div>

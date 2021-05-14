@@ -1,0 +1,75 @@
+<br>
+<div class="row" style="margin-left: 0px;">
+    <div >
+        <h3 style="margin-left: 10px;">Product Dashboard</h3>
+        <div class="container2" *ngIf="products && products.length">
+           
+                <!-- <div class="card" *ngFor="let product of filteredProducts | paginate : {id: 'pagination',
+                itemsPerPage : 6 , currentPage :page ,totalItems: totalRecords}" style="width: 18rem; margin: 15px;">
+                    <div class="card-body">
+                        <img class="card-img-top" [src]='product.image' alt="Card image cap">
+                        <a [routerLink]="['/product', product.id]" routerLinkActive = "active">{{product.name}}</a>
+                        <p class="card-text">{{product.price}}</p>
+                    </div>
+                </div> -->
+                <!-- <a [routerLink]="['/product/',product.id]"> -->
+                    <div *ngFor="let product of filteredProducts | paginate : {id: 'pagination',
+                    itemsPerPage : 6 , currentPage :page ,totalItems: totalRecords}" style="width: 18rem; margin: 15px;">
+                    <a [routerLink]="['/product/',product.id]">
+                    <div class="card mb-2">
+                      <div class="card-img-wrapper">
+                        <img class="card-img-top" height="200px" width="150px" src="{{product.image}}" alt="{{product.name}}">
+                        <!-- <ul class="list-inline member-icons animate text-center">
+                        </ul> -->
+                      </div>
+                    </div>
+                    <div class="card-body p-1 text-dark">
+                      <h6 class="card-title text-center mb-1">
+                      {{product.name}}</h6>
+                      <p class="card-text font-weight-bold text-center">{{product.price |currency:'INR'}}</p>
+                    </div>
+                    </a>
+                </div>
+                    <!-- </a> -->
+            
+        </div>
+        <pagination-controls  id="pagination" maxSize ="5" directionLinks ="true" (pageChange)="page = $event"></pagination-controls>
+    </div>
+    <div >
+        <input
+        type="search"
+        [(ngModel)] = "filterText"
+        id="filterInput"
+        [placeholder]="filterInputPlaceholder"
+        class="form-control"
+        style="margin-top: 53px;"
+      />
+        <div class="card" style="width: 18rem;margin-top: 53px;">
+            <div class="card-body">
+                <h5 class="card-title">Filter By :</h5>
+               <div *ngFor = "let category of categories">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" (change) = "filter($event, category)">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      {{category.name}} 
+                    </label>
+                    <span class="badge bg-secondary" >{{category.length}}</span>
+                  </div>
+               </div>
+               
+                <!-- <h6>Name : </h6> -->
+              
+                <!-- <div class="col-md-4">Name:</div> -->
+               
+                <!-- <div class="col-md-8">
+                 
+                </div> -->
+              
+               
+            </div>
+        </div>
+    </div>
+    
+</div> 
+
+
