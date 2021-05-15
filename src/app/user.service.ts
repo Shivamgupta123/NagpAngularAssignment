@@ -1,11 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
+  baseUrl = environment.BASE_URL;
   isLoggedIn : BehaviorSubject<boolean>
   current_user : BehaviorSubject<any>
   constructor(private _http : HttpClient) {
@@ -14,7 +16,7 @@ export class UserService {
    }
 
   getAllUsers(){
-    return this._http.get('http://localhost:3000/users')
+    return this._http.get(this.baseUrl + '/users')
   }
 
   authenticate(username : string, password : string){
@@ -32,7 +34,7 @@ export class UserService {
     
   }
   registerUser(user : any){
-    return this._http.post('http://localhost:3000/users', user)
+    return this._http.post(this.baseUrl+'/users', user)
   }
   logout(){
     localStorage.setItem('isLoggedIn', 'No');
