@@ -177,24 +177,44 @@
       "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg"
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "id": 1,
+      "userId": 1,
+      "productId": 3,
+      "productImage": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+      "name": "Mens Cotton Jacket",
+      "price": 55.99,
+      "category": "men's clothing",
+      "quantityInCart": 1
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "productId": 5,
+      "productImage": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+      "name": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+      "price": 695,
+      "category": "jewelery",
+      "quantityInCart": 1
+    }
+  ],
   "categories": [
     {
-      "name" : "electronics",
-      "length" : 5
+      "name": "electronics",
+      "length": 5
     },
     {
-      "name" : "jewelery",
-      "length" : 5
+      "name": "jewelery",
+      "length": 5
     },
     {
-      "name" : "men's clothing",
-      "length" : 5
+      "name": "men's clothing",
+      "length": 5
     },
     {
-      "name" : "women's clothing",
-      "length" : 5
+      "name": "women's clothing",
+      "length": 5
     }
-    
   ]
 }

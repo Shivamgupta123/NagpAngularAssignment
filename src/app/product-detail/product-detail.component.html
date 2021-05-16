@@ -17,11 +17,11 @@
       <div class="col-md-8">
         <div class="card-body">
           <h5 class="card-title">{{product.name}}</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text">{{product.description}}</p>
           <p class = "card-text">Price : {{product.price}}</p>
           <p class = "card-text">Category : {{product.category}}</p>
-          <p class = "card-text"># of items available : {{product.number}}</p>
-          <p class="card-text" *ngIf = "product.number == 0"><small class="text-muted">Out Of stock!</small></p>
+          <!-- <p class = "card-text"># of items available : {{product.number}}</p> -->
+          <!-- <p class="card-text" *ngIf = "product.number == 0"><small class="text-muted">Out Of stock!</small></p> -->
           <button class="btn btn-primary" (click) = "addToCart(product)" [disabled] = "product.number == 0">Add to cart</button>
         </div>
       </div>

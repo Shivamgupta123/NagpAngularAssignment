@@ -6,7 +6,8 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class CartService {
-  baseUrl = environment.BASE_URL;
+  // baseUrl = environment.BASE_URL;
+  baseUrl = 'http://localhost:3000'
   constructor(private _http : HttpClient) { }
 
   addToCart(product : any){
