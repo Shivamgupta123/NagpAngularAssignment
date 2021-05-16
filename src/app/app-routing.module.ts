@@ -10,7 +10,7 @@ import { ProductGridComponent } from './product-grid/product-grid.component';
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
-  // {path : '', component : LoginComponent},
+   {path : '', component : ProductGridComponent},
   {path : 'grid', component : ProductGridComponent},
   {path : 'cart', component : CartComponent, canActivate : [AuthGuard]},
   {path : 'product/:id', component : ProductDetailComponent},

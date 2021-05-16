@@ -1,0 +1,17 @@
+{
+    "Welcome":"Welcome",
+    "Language":"Change Language",
+    "English":"English",
+    "German":"German",
+    "Logout":"Logout",
+    "Register":"Register",
+    "Login":"Login",
+    "Search":"Search for name",
+    "CheckOut":"CheckOut",
+    "Continue Shopping":"Continue Shopping",
+    "Products":"Products",
+    "Payment":"Payment Details",
+    "BillAddress":"Billing Address",
+    "EmptyCart":"Your Cart is Empty",
+    "PlaceOrder":"Place Order"
+  }

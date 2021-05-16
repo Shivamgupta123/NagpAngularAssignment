@@ -63,6 +63,20 @@
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>
+
+      <!-- change language -->
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="/posts" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-target="#my-target">
+          {{'Language' | translate}}
+        </a>
+        <div id="my-target" class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" (click)="changeLanguage('de')">{{'German' | translate}}</a>
+          <a class="dropdown-item" (click)="changeLanguage('en')">{{'English' | translate}}</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
       
     </ul>
   </div>
