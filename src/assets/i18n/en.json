@@ -13,5 +13,7 @@
     "Payment":"Payment Details",
     "BillAddress":"Billing Address",
     "EmptyCart":"Your Cart is Empty",
-    "PlaceOrder":"Place Order"
+    "PlaceOrder":"Place Order",
+    "dashboard" : "Product Dashboard",
+    "Home" : "Home"
   }

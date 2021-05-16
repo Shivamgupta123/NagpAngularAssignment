@@ -14,6 +14,7 @@
     "Continue Shopping":"Mit dem Einkaufen fortfahren",
     "Products":"Produkte",
     "EmptyCart":"आपका कार्ट खाली है",
-    "PlaceOrder":"प्लेस आर्डर"
-  
+    "PlaceOrder":"प्लेस आर्डर",
+    "dashboard" : "Produkt-Dashboard",
+    "Home" : "Zuhause"
   }

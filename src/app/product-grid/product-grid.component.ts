@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { IProduct } from '../models/product';
 import { ProductService } from '../product.service';
 
@@ -26,7 +27,7 @@ export class ProductGridComponent implements OnInit {
   filteredProducts : any;
   
   
-  constructor(private productService : ProductService) {
+  constructor(private productService : ProductService, private translate : TranslateService) {
   }
 
   ngOnInit(): void {

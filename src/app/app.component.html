@@ -44,17 +44,17 @@
   <div class="collapse navbar-collapse " id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto " style="margin-left: 1004px;">
       <li class="nav-item active">
-        <a class="nav-link" [routerLink] = "['grid']" routerLinkActive = "active">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" [routerLink] = "['grid']" routerLinkActive = "active">{{'Home' | translate}} <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink] = "['cart']" routerLinkActive = "active">Cart</a>
+        <a class="nav-link" [routerLink] = "['cart']" routerLinkActive = "active">{{'Cart' | translate}}</a>
       </li>
       <li class="nav-item" *ngIf = "!isLoggedIn">
-        <a class="nav-link" [routerLink] = "['login']" routerLinkActive = "active" >Login</a>
+        <a class="nav-link" [routerLink] = "['login']" routerLinkActive = "active" >{{'Login' | translate}}</a>
       </li>
       <li class="nav-item dropdown" *ngIf = "isLoggedIn">
-        <a class="nav-link dropdown-toggle" href="/posts" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-target="#my-target">
-          {{' '+currentUser.first_name + ' ' + currentUser.last_name + ' '}}
+        <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-target="#my-target">
+        {{'Welcome' | translate}}  {{' '+currentUser.first_name + ' ' + currentUser.last_name + ' '}}
         </a>
         <div id="my-target" class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" (click) = "logout()">Logout</a>
@@ -67,10 +67,10 @@
       <!-- change language -->
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="/posts" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-target="#my-target">
+        <a class="nav-link dropdown-toggle"  id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-target="#my-target1">
           {{'Language' | translate}}
         </a>
-        <div id="my-target" class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <div id="my-target1" class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" (click)="changeLanguage('de')">{{'German' | translate}}</a>
           <a class="dropdown-item" (click)="changeLanguage('en')">{{'English' | translate}}</a>
           <div class="dropdown-divider"></div>
