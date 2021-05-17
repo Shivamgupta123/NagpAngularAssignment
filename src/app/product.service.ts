@@ -6,8 +6,8 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class ProductService {
-   baseUrl = environment.BASE_URL;
-  // baseUrl = 'http://localhost:3000'
+  //  baseUrl = environment.BASE_URL;
+  baseUrl = 'http://localhost:3000'
   constructor(private _http : HttpClient) { }
 
   getProducts(){
