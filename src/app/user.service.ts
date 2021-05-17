@@ -7,8 +7,8 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class UserService {
-  //  baseUrl = environment.BASE_URL;
-  baseUrl = 'http://localhost:3000'
+   baseUrl = environment.BASE_URL;
+  // baseUrl = 'http://localhost:3000'
   isLoggedIn : BehaviorSubject<boolean>
   current_user : BehaviorSubject<any>
   constructor(private _http : HttpClient) {
